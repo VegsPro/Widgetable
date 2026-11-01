@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Widgetable</string>
+    <string name="pet_widget_name">Питомец</string>
+    <string name="mood_widget_name">Настроение</string>
+    <string name="miss_you_widget_name">Скучаю</string>
+</resources>

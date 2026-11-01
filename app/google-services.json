@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "363906771598",
+    "firebase_url": "https://vix-hub-3caca-default-rtdb.firebaseio.com",
+    "project_id": "vix-hub-3caca",
+    "storage_bucket": "vix-hub-3caca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363906771598:android:84cf77f8449ff99bd7f7df",
+        "android_client_info": {
+          "package_name": "com.vixhub.ms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363906771598-eermlqs1vu42ad9frris0sigf1sqt5i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz7JGOdcbofl3NZ8t2NooyoYNOu-Vy8Sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363906771598-eermlqs1vu42ad9frris0sigf1sqt5i8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
