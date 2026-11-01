@@ -1,4 +1,4 @@
-package com.vixhub.ms.data
+package com.widgetable.vegs.data
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser

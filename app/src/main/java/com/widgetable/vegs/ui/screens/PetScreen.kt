@@ -1,4 +1,4 @@
-package com.vixhub.ms.ui.screens
+package com.widgetable.vegs.ui.screens
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
@@ -19,9 +19,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vixhub.ms.ui.theme.PetGreen
-import com.vixhub.ms.ui.theme.PinkPrimary
-import com.vixhub.ms.viewmodel.MainViewModel
+import com.widgetable.vegs.ui.theme.PetGreen
+import com.widgetable.vegs.ui.theme.PinkPrimary
+import com.widgetable.vegs.viewmodel.MainViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

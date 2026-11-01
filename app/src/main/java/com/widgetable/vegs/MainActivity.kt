@@ -1,4 +1,4 @@
-package com.vixhub.ms
+package com.widgetable.vegs
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -14,9 +14,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.vixhub.ms.ui.screens.*
-import com.vixhub.ms.ui.theme.WidgetableTheme
-import com.vixhub.ms.viewmodel.MainViewModel
+import com.widgetable.vegs.ui.screens.*
+import com.widgetable.vegs.ui.theme.WidgetableTheme
+import com.widgetable.vegs.viewmodel.MainViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

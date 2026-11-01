@@ -1,4 +1,4 @@
-package com.vixhub.ms
+package com.widgetable.vegs
 
 import android.app.Application
 import com.google.firebase.FirebaseApp

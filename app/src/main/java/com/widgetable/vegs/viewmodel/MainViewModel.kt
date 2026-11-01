@@ -1,8 +1,8 @@
-package com.vixhub.ms.viewmodel
+package com.widgetable.vegs.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vixhub.ms.data.*
+import com.widgetable.vegs.data.*
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 

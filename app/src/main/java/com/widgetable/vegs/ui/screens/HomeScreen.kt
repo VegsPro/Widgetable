@@ -1,4 +1,4 @@
-package com.vixhub.ms.ui.screens
+package com.widgetable.vegs.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -18,10 +18,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vixhub.ms.data.SharedPet
-import com.vixhub.ms.ui.theme.PetGreen
-import com.vixhub.ms.ui.theme.PinkPrimary
-import com.vixhub.ms.viewmodel.MainViewModel
+import com.widgetable.vegs.data.SharedPet
+import com.widgetable.vegs.ui.theme.PetGreen
+import com.widgetable.vegs.ui.theme.PinkPrimary
+import com.widgetable.vegs.viewmodel.MainViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -263,7 +263,7 @@ private fun PetCard(pet: SharedPet?, petId: String, onClick: () -> Unit) {
 }
 
 @Composable
-private fun FriendMoodCard(friend: com.vixhub.ms.data.Friend, onMissYou: () -> Unit) {
+private fun FriendMoodCard(friend: com.widgetable.vegs.data.Friend, onMissYou: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp)

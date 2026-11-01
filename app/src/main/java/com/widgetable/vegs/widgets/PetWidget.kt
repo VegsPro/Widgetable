@@ -1,4 +1,4 @@
-package com.vixhub.ms.widgets
+package com.widgetable.vegs.widgets
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -18,41 +18,49 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 
-class MissYouWidgetReceiver : GlanceAppWidgetReceiver() {
-    override val glanceAppWidget: GlanceAppWidget = MissYouWidget()
+class PetWidgetReceiver : GlanceAppWidgetReceiver() {
+    override val glanceAppWidget: GlanceAppWidget = PetWidget()
 }
 
-class MissYouWidget : GlanceAppWidget() {
+class PetWidget : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         provideContent {
             GlanceTheme {
-                MissYouWidgetContent()
+                PetWidgetContent()
             }
         }
     }
 }
 
 @Composable
-private fun MissYouWidgetContent() {
-    Row(
+private fun PetWidgetContent() {
+    Column(
         modifier = GlanceModifier
             .fillMaxSize()
-            .background(ColorProvider(Color(0xFFFFF0F5)))
+            .background(ColorProvider(Color(0xFFFFF5F9)))
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "💕", style = TextStyle(fontSize = 28.sp))
-        Spacer(GlanceModifier.width(8.dp))
-        Column {
-            Text(
-                text = "Скучаю",
-                style = TextStyle(fontSize = 11.sp, color = ColorProvider(Color(0xFF888888)))
+        Text(
+            text = "🐱",
+            style = TextStyle(fontSize = 36.sp)
+        )
+        Spacer(GlanceModifier.height(4.dp))
+        Text(
+            text = "Пушистик",
+            style = TextStyle(
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                color = ColorProvider(Color(0xFFE05A9A))
             )
-            Text(
-                text = "0 раз",
-                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 14.sp, color = ColorProvider(Color(0xFFE05A9A)))
+        )
+        Text(
+            text = "Счастлив ❤️",
+            style = TextStyle(
+                fontSize = 12.sp,
+                color = ColorProvider(Color(0xFF666666))
             )
-        }
+        )
     }
 }

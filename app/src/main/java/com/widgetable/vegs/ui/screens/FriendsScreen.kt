@@ -1,4 +1,4 @@
-package com.vixhub.ms.ui.screens
+package com.widgetable.vegs.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -17,7 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vixhub.ms.viewmodel.MainViewModel
+import com.widgetable.vegs.viewmodel.MainViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

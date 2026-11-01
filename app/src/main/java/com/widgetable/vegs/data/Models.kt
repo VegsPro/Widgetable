@@ -1,4 +1,4 @@
-package com.vixhub.ms.data
+package com.widgetable.vegs.data
 
 data class UserProfile(
     val uid: String = "",

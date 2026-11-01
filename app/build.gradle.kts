@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.vixhub.ms"
+    namespace = "com.widgetable.vegs"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.vixhub.ms"
+        applicationId = "com.widgetable.vegs"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

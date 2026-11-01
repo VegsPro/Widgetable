@@ -1,4 +1,4 @@
-package com.vixhub.ms.ui.screens
+package com.widgetable.vegs.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -23,9 +23,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vixhub.ms.ui.theme.PinkPrimary
-import com.vixhub.ms.ui.theme.SoftBackground
-import com.vixhub.ms.viewmodel.MainViewModel
+import com.widgetable.vegs.ui.theme.PinkPrimary
+import com.widgetable.vegs.ui.theme.SoftBackground
+import com.widgetable.vegs.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 
 @Composable

@@ -1,4 +1,4 @@
-package com.vixhub.ms.widgets
+package com.widgetable.vegs.widgets
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -18,39 +18,39 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 
-class MoodWidgetReceiver : GlanceAppWidgetReceiver() {
-    override val glanceAppWidget: GlanceAppWidget = MoodWidget()
+class MissYouWidgetReceiver : GlanceAppWidgetReceiver() {
+    override val glanceAppWidget: GlanceAppWidget = MissYouWidget()
 }
 
-class MoodWidget : GlanceAppWidget() {
+class MissYouWidget : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         provideContent {
             GlanceTheme {
-                MoodWidgetContent()
+                MissYouWidgetContent()
             }
         }
     }
 }
 
 @Composable
-private fun MoodWidgetContent() {
+private fun MissYouWidgetContent() {
     Row(
         modifier = GlanceModifier
             .fillMaxSize()
-            .background(ColorProvider(Color(0xFFFFF5F9)))
+            .background(ColorProvider(Color(0xFFFFF0F5)))
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "😊", style = TextStyle(fontSize = 28.sp))
+        Text(text = "💕", style = TextStyle(fontSize = 28.sp))
         Spacer(GlanceModifier.width(8.dp))
         Column {
             Text(
-                text = "Настроение",
+                text = "Скучаю",
                 style = TextStyle(fontSize = 11.sp, color = ColorProvider(Color(0xFF888888)))
             )
             Text(
-                text = "Хорошо",
+                text = "0 раз",
                 style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 14.sp, color = ColorProvider(Color(0xFFE05A9A)))
             )
         }

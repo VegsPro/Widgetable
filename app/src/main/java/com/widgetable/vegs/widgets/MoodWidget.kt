@@ -1,4 +1,4 @@
-package com.vixhub.ms.widgets
+package com.widgetable.vegs.widgets
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -18,23 +18,23 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 
-class PetWidgetReceiver : GlanceAppWidgetReceiver() {
-    override val glanceAppWidget: GlanceAppWidget = PetWidget()
+class MoodWidgetReceiver : GlanceAppWidgetReceiver() {
+    override val glanceAppWidget: GlanceAppWidget = MoodWidget()
 }
 
-class PetWidget : GlanceAppWidget() {
+class MoodWidget : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         provideContent {
             GlanceTheme {
-                PetWidgetContent()
+                MoodWidgetContent()
             }
         }
     }
 }
 
 @Composable
-private fun PetWidgetContent() {
-    Column(
+private fun MoodWidgetContent() {
+    Row(
         modifier = GlanceModifier
             .fillMaxSize()
             .background(ColorProvider(Color(0xFFFFF5F9)))
@@ -42,25 +42,17 @@ private fun PetWidgetContent() {
         verticalAlignment = Alignment.CenterVertically,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = "🐱",
-            style = TextStyle(fontSize = 36.sp)
-        )
-        Spacer(GlanceModifier.height(4.dp))
-        Text(
-            text = "Пушистик",
-            style = TextStyle(
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
-                color = ColorProvider(Color(0xFFE05A9A))
+        Text(text = "😊", style = TextStyle(fontSize = 28.sp))
+        Spacer(GlanceModifier.width(8.dp))
+        Column {
+            Text(
+                text = "Настроение",
+                style = TextStyle(fontSize = 11.sp, color = ColorProvider(Color(0xFF888888)))
             )
-        )
-        Text(
-            text = "Счастлив ❤️",
-            style = TextStyle(
-                fontSize = 12.sp,
-                color = ColorProvider(Color(0xFF666666))
+            Text(
+                text = "Хорошо",
+                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 14.sp, color = ColorProvider(Color(0xFFE05A9A)))
             )
-        )
+        }
     }
 }
