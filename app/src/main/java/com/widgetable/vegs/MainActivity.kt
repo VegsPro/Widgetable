@@ -68,7 +68,7 @@ fun WidgetableAppRoot() {
         }
         composable("pet/{petId}") { backStack ->
             val petId = backStack.arguments?.getString("petId") ?: return@composable
-            PetScreen(
+            PetHomeScreen(
                 petId = petId,
                 viewModel = viewModel,
                 onBack = { navController.popBackStack() }

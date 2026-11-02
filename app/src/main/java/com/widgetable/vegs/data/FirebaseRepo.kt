@@ -239,7 +239,6 @@ class FirebaseRepo {
     }
 
     suspend fun decayPetStats(petId: String) {
-        // Called periodically or on open
         val ref = db.child("pets").child(petId)
         val snap = ref.get().await()
         val pet = snap.getValue(SharedPet::class.java) ?: return
@@ -249,10 +248,41 @@ class FirebaseRepo {
 
         val newHunger = (pet.hunger - (hoursSinceFed * 4).toInt()).coerceIn(0, 100)
         val newHappiness = (pet.happiness - (hoursSincePlay * 3).toInt()).coerceIn(0, 100)
-        val newEnergy = (pet.energy + (hoursSincePlay * 2).toInt()).coerceIn(0, 100) // rest recovers energy
+        val newEnergy = (pet.energy + (hoursSincePlay * 2).toInt()).coerceIn(0, 100)
 
         ref.child("hunger").setValue(newHunger).await()
         ref.child("happiness").setValue(newHappiness).await()
         ref.child("energy").setValue(newEnergy).await()
+    }
+
+    suspend fun updatePetPosition(petId: String, x: Float, y: Float, room: String) {
+        val ref = db.child("pets").child(petId)
+        ref.child("posX").setValue(x).await()
+        ref.child("posY").setValue(y).await()
+        ref.child("currentRoom").setValue(room).await()
+    }
+
+    suspend fun updatePetRoom(petId: String, room: String) {
+        db.child("pets").child(petId).child("currentRoom").setValue(room).await()
+    }
+
+    suspend fun washPet(petId: String) {
+        val ref = db.child("pets").child(petId)
+        val snap = ref.get().await()
+        val pet = snap.getValue(SharedPet::class.java) ?: return
+        ref.child("cleanliness").setValue((pet.cleanliness + 30).coerceAtMost(100)).await()
+        ref.child("happiness").setValue((pet.happiness + 10).coerceAtMost(100)).await()
+        ref.child("lastWashed").setValue(System.currentTimeMillis()).await()
+    }
+
+    suspend fun toggleSleep(petId: String) {
+        val ref = db.child("pets").child(petId)
+        val snap = ref.get().await()
+        val pet = snap.getValue(SharedPet::class.java) ?: return
+        val newSleep = !pet.isSleeping
+        ref.child("isSleeping").setValue(newSleep).await()
+        if (newSleep) {
+            ref.child("energy").setValue((pet.energy + 20).coerceAtMost(100)).await()
+        }
     }
 }

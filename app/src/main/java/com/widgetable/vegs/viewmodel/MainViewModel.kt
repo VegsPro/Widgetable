@@ -153,4 +153,24 @@ class MainViewModel : ViewModel() {
             repo.incrementMissYou(from, toUid)
         }
     }
+
+    fun updatePetPosition(petId: String, x: Float, y: Float, room: String) {
+        viewModelScope.launch {
+            repo.updatePetPosition(petId, x, y, room)
+        }
+    }
+
+    fun updatePetRoom(petId: String, room: String) {
+        viewModelScope.launch {
+            repo.updatePetRoom(petId, room)
+        }
+    }
+
+    fun washPet(petId: String) {
+        viewModelScope.launch { repo.washPet(petId) }
+    }
+
+    fun toggleSleep(petId: String) {
+        viewModelScope.launch { repo.toggleSleep(petId) }
+    }
 }

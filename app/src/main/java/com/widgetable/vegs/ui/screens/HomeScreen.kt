@@ -152,7 +152,7 @@ fun HomeScreen(
                             )
                             Spacer(Modifier.height(12.dp))
                             Button(
-                                onClick = { /* create solo for now */ viewModel.createPet("Пушистик", "cat", "🐱") { onNavigateToPet(it) } },
+                                onClick = { /* create solo for now */ viewModel.createPet("Пэпэ", "penguin", "🐧") { onNavigateToPet(it) } },
                                 shape = RoundedCornerShape(12.dp)
                             ) {
                                 Text("Создать питомца")
